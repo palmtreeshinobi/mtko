@@ -17,7 +17,7 @@ setup(
     url='https://github.com/palmtreeshinobi/mtko/',
     project_urls={
         'Source Code': 'https://github.com/palmtreeshinobi/mtko/',
-    }
+    },
     packages=find_packages(),
     install_requires=[
         'openai',
