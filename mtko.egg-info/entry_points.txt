@@ -1,3 +1,0 @@
-[console_scripts]
-mtko = mtko.main:main
-
