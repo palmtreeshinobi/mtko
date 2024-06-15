@@ -1,16 +1,107 @@
+# Byte-compiled / optimized / DLL files
 __pycache__/
+*.py[cod]
+*$py.class
 
-# Virtual environment
-venv/
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Virtual environments
+.env
+.venv/
 ENV/
 env/
-.venv/
-.ENV/
-.env/
-env.bak/
+venv/
 venv.bak/
+env.bak/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Temporary files
+tmp/
+temp/
+
+# VS Code settings
+.vscode/
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+.vscode/extensions.json
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# Python specific
+*.pyc
+*.pyo
+*.pyd
+
+# Logs
+*.log
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+
+# Test artifacts
+.cache
+pytest_cache
+
+# Mypy
+.mypy_cache/
+
+# Environments
 .env
 .env.*
+.venv
+venv.bak/
+ENV.bak/
+env.bak/
+
+# Sphinx documentation
+docs/_build/
+
+# IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.spyderproject
+.spyderworkspace
+
+# Security
+credentials/
+
 
 # Allow .env.example
 !.env.example
