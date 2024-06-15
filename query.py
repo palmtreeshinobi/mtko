@@ -1,21 +1,24 @@
-import requests
+from openai import OpenAI
 
 # Function to query AI
 def query_ai(prompt, api_key):
-    url = "https://api.openai.com/v1/completions"
-    headers = {
-        "Authorization": f"Bearer {api_key}",
-        "Content-Type": "application/json"
-    }
-    data = {
-        "model": "text-davinci-003",
-        "prompt": prompt,
-        "max_tokens": 150,
-        "temperature": 0.7
-    }
-    response = requests.post(url, headers=headers, json=data)
-    if response.status_code == 200:
-        return response.json()['choices'][0]['text'].strip()
-    else:
-        return f"Error: {response.status_code} - {response.text}"
 
+    client = OpenAI(api_key=api_key)
+
+    response = client.chat.completions.create(
+        model="gpt-4",
+        messages=[
+            {
+            "role": "system",
+            "content": "You will be provided with a command executed in a terminal, and the output of the command. Your job is to explain the command/output and troubleshoot any error messages."
+            },
+            {
+            "role": "user",
+            "content": prompt
+            }
+        ],
+        temperature=0.7,
+        max_tokens=256,
+        top_p=1
+    )
+    return response.choices[0].message.content.strip()
