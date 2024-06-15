@@ -15,3 +15,4 @@
     ```
 
 ## Usage
+need to figure out a better way to get output from the terminal
