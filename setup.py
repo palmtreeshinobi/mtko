@@ -1,17 +1,9 @@
 from setuptools import setup, find_packages
-from setuptools.command.install import install
-import subprocess
-
-class PostInstallCommand(install):
-    """Post-installation for installation mode."""
-    def run(self):
-        install.run(self)
-        # Run the post install script
-        subprocess.call(['python', 'post_install.py'])
+from custom_commands import CustomInstallCommand, CustomDevelopCommand
 
 setup(
     name='mtko',
-    version='0.1.3',
+    version='0.1.4',
     description='A CLI tool for sending commands, error messages, tracebacks, and file contents directly to OpenAI GPT models without leaving your terminal.',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
@@ -26,7 +18,8 @@ setup(
         'python-dotenv'
     ],
     cmdclass={
-        'install': PostInstallCommand,
+        'install': CustomInstallCommand,
+        'develop': CustomDevelopCommand,
     },
     entry_points={
         'console_scripts': [
