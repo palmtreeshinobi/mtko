@@ -1,8 +1,8 @@
 import os
 import argparse
 from dotenv import load_dotenv
-from history import get_last_command, execute_command
-from query import query_ai
+from .history import get_last_command, execute_command
+from .query import query_ai
 
 
 def main():
