@@ -11,7 +11,7 @@ class PostInstallCommand(install):
 
 setup(
     name='mtko',
-    version='0.1',
+    version='0.1.1',
     description='A CLI tool for sending commands, error messages, tracebacks, and file contents directly to OpenAI GPT models without leaving your terminal.',
     author='Van',
     url='https://github.com/palmtreeshinobi/mtko/',
@@ -26,9 +26,11 @@ setup(
     cmdclass={
         'install': PostInstallCommand,
     },
-    entry_points={
-        'console_scripts': [
-            'mtko=mtko.main:main',
-        ],
-    },
+    classifiers=[
+        'Programming Language :: Python :: 3',
+        'License :: OSI Approved :: MIT License',
+        'Operating System :: OS Independent',
+    ],
+    license='MIT',
+    python_requires='>=3.6',
 )
