@@ -11,3 +11,6 @@ def create_env_file():
         print(".env file created with your API key.")
     else:
         print("Operation cancelled. You can manually update the .env.example file later.")
+
+if __name__ == "__main__":
+    create_env_file()

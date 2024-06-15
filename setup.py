@@ -13,6 +13,8 @@ setup(
     name='mtko',
     version='0.1.1',
     description='A CLI tool for sending commands, error messages, tracebacks, and file contents directly to OpenAI GPT models without leaving your terminal.',
+    long_description=open('README.md').read(),
+    long_description_content_type='text/markdown',
     author='Van',
     url='https://github.com/palmtreeshinobi/mtko/',
     project_urls={
@@ -25,6 +27,11 @@ setup(
     ],
     cmdclass={
         'install': PostInstallCommand,
+    },
+    entry_points={
+        'console_scripts': [
+            'mtko=mtko.main:main',
+        ],
     },
     classifiers=[
         'Programming Language :: Python :: 3',
