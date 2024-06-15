@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: mtko
+Version: 0.1
+Summary: A CLI tool for sending commands, error messages, tracebacks, and file contents directly to OpenAI GPT models without leaving your terminal.
+Home-page: UNKNOWN
+Author: Van
+License: UNKNOWN
+Platform: UNKNOWN
+
+UNKNOWN
+
