@@ -1,3 +1,4 @@
+import os
 from setuptools.command.install import install
 from setuptools.command.develop import develop
 
