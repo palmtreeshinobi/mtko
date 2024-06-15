@@ -3,7 +3,7 @@ from custom_commands import CustomInstallCommand, CustomDevelopCommand
 
 setup(
     name='mtko',
-    version='0.1.5',
+    version='0.1.6',
     description='A CLI tool for sending commands, error messages, tracebacks, and file contents directly to OpenAI GPT models without leaving your terminal.',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
@@ -17,13 +17,10 @@ setup(
         'openai',
         'python-dotenv'
     ],
-    cmdclass={
-        'install': CustomInstallCommand,
-        'develop': CustomDevelopCommand,
-    },
     entry_points={
         'console_scripts': [
             'mtko=mtko.main:main',
+            'mtko-setkey=mtko.env_setup:setup_env',
         ],
     },
     classifiers=[
